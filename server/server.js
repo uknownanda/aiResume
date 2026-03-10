@@ -19,7 +19,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Allow CORS
-app.use(cors());
+app.use(cors(
+  {origin: "https://airesume-qsrb.onrender.com"}
+));
 
 app.get("/", (req, res) => res.send("Server is Live..."));
 
